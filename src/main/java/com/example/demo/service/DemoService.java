@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,11 +34,10 @@ public class DemoService {
 		
 	}
 
-	public String getCustomDemo() {
-		@Query("Select * from demo")
-		public List<Demo> FindAllWithDescriptionQuery();
-		// TODO Auto-generated method stub
-		return null;
+
+	public List<Demo> getCustomQueryResult(){
+		return demoRepo.getCustomQueryResult();
+		
 	}
 
 }

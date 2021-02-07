@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,8 +36,8 @@ public class DemoController {
 		
 	}
 	@PostMapping("/getCustom")
-	String getDemo() {
-		return demoService.getCustomDemo();
+	List<Demo> getDemo() {
+		return demoService.getCustomQueryResult();
 		
 	}
 
